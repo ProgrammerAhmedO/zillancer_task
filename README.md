@@ -12,8 +12,6 @@ develop APIs for the CRMLED and MASSLM models in Django. Additionally, create a 
 
 ## Features
 
-## Features
-
 This task involves the development of APIs for two Django models: `CRMLED` and `MASSLM`. Additionally, it requires implementing a function to calculate forecasted amounts based on specific conditions using data from the `CRMopp` model. These forecasted values are organized and listed by month according to the `CRMopp.target_date`.
 
 
