@@ -55,9 +55,6 @@ def home(request):
     context = {}
     return render(request, "Base/index.html",context)
 
-from rest_framework import generics
-from rest_framework.authentication import SessionAuthentication, BasicAuthentication
-from rest_framework.permissions import IsAuthenticated
 
 class CRMLedListCreateView(generics.ListCreateAPIView):
     queryset = CRMLed.objects.all()
