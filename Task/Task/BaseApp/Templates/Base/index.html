@@ -1,0 +1,77 @@
+{% extends 'main.html' %}
+{% load static %}
+{%block content%}
+
+<!--hero header-->
+<section class="py-7 py-md-0 bg-hero" id="home">
+    <div class="container">
+        <div class="row vh-md-100">
+            <div class="col-md-8 col-sm-10 col-12 mx-auto my-auto text-center">
+                <h1 class="heading-black text-capitalize">Zillancer Task</h1>
+                <p class="lead py-3">here you can find task details</p>
+                <a class="btn btn-primary d-inline-flex flex-row align-items-center" href="{% url 'forecast_view' %}">
+                    Get started now
+                    <em class="ml-2" data-feather="arrow-right"></em>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- features section -->
+<section class="pt-6 pb-7" id="features">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 mx-auto text-center">
+                <h2 class="heading-black">The Task include the following</h2>
+                <p class="text-muted lead">Develop APIs for the CRMLED and MASSLM models in Django. Additionally, create a function to calculate forecasted amounts based on specific conditions using data from the CRMopp model. Organize and list these forecasted values by month according to the CRMopp.target_date.</p>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-md-10 mx-auto">
+                <div class="row feature-boxes">
+                    <div class="col-md-6 box">
+                        <div class="icon-box box-primary">
+                            <div class="icon-box-inner">
+                                <span data-feather="edit-3" width="35" height="35"></span>
+                            </div>
+                        </div>
+                        <h5>API Development</h5>
+                        <p class="text-muted">The task involves the creation of APIs for the CRMLED and MASSLM models. This likely includes defining API endpoints, serializers, and views to enable interactions with these models through HTTP requests.</p>
+                    </div>
+                    <div class="col-md-6 box">
+                        <div class="icon-box box-success">
+                            <div class="icon-box-inner">
+                                <span data-feather="monitor" width="35" height="35"></span>
+                            </div>
+                        </div>
+                        <h5>Forecast Calculation</h5>
+                        <p class="text-muted">A function is to be implemented that calculates forecasted amounts based on specific business logic involving the CRMopp and CRMpil models. It involves multiplying probability percentages and summing up values for opportunities with specific date conditions.</p>
+                    </div>
+                    <div class="col-md-6 box">
+                        <div class="icon-box box-danger">
+                            <div class="icon-box-inner">
+                                <span data-feather="layout" width="35" height="35"></span>
+                            </div>
+                        </div>
+                        <h5>Date Filtering</h5>
+                        <p class="text-muted">The task specifies that the calculation should only consider opportunities with a closed_on date that is null or blank. This implies the need for data filtering based on specific date criteria.</p>
+                    </div>
+                    <div class="col-md-6 box">
+                        <div class="icon-box box-info">
+                            <div class="icon-box-inner">
+                                <span data-feather="globe" width="35" height="35"></span>
+                            </div>
+                        </div>
+                        <h5>Monthly Categorization</h5>
+                        <p class="text-muted">The calculated forecasted values should be organized by month, providing insights into how the forecasted amounts vary over time. This likely requires date parsing and aggregation of data by month.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+  
+    </div>
+</section>
+
+
+{%endblock%}

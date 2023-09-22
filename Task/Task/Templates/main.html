@@ -1,0 +1,27 @@
+
+{% include 'header.html' %}
+
+{% include 'nav.html' %}
+{%load static%}
+{% if messages %}
+<br><br>
+    <ul class="messages">
+        {% for message in messages %}
+        
+            <div class="alert alert-primary" role="alert">
+                {{ message }}
+              </div>
+            
+        {% endfor %}
+    </ul>
+    {% endif %}
+
+<body>
+{%block content%}
+
+
+{%endblock%}
+</body>
+{% include 'footer.html' %}
+
+<!-- Script here-->
